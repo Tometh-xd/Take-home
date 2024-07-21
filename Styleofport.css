@@ -1,0 +1,171 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header {
+    background-color: #f12c2c;
+    color: #fff;
+    padding: 1rem;
+    text-align: center;
+}
+
+.container {
+    display: flex;
+}
+
+.sidebar {
+    width: 250px; /* Fixed width for sidebar */
+    background-color: #0C5259;
+    padding: 1rem;
+    position: fixed;
+    height: 100vh;
+    overflow-y: auto;
+}
+
+.sidebar nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+.sidebar nav ul li {
+    margin-bottom: 10px;
+}
+
+.sidebar nav ul li a {
+    text-decoration: none;
+    color: #edebeb;
+    font-weight: bold;
+}
+
+main {
+    margin-left: 260px; /* Add margin to make space for the fixed sidebar */
+    padding: 2rem;
+    flex: 1; 
+    background-color: #FDE8E9;
+}
+
+.content-container {
+    display: flex;
+    justify-content: center; /* Center the content */
+    align-items: center; 
+    gap: 1rem; 
+}
+
+.text-box {
+    background-color: #A04933;
+    border: 1px solid #ddd;
+    padding: 1rem;
+    border-radius: 4px;
+    font-family: 'Roboto', sans-serif;
+    color: #f8f4f4;
+    max-width: 75%; /* Set max-width to 75% of the parent container */
+    margin: 0 auto; /* Center the text box */
+}
+
+.font-pic {
+    width: 150px;
+    height: auto;
+    border-radius: 50%;
+}
+
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+    }
+
+    .sidebar {
+        width: 100%;
+        height: auto;
+        position: relative;
+    }
+
+    main {
+        margin-left: 0;
+    }
+
+    .content-container {
+        flex-direction: column;
+        align-items: flex-start; /* Align items to the left on smaller screens */
+    }
+
+    .text-box {
+        max-width: 100%; /* Ensure it doesn't exceed the container width */
+        margin-bottom: 1rem; /* Add space between items */
+    }
+}
+
+h1 {
+    font-weight: 1200; 
+    font-size: xx-large;
+}
+
+/* Basic reset for the form */
+form {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Style the form groups */
+.form-group {
+    margin-bottom: 15px;
+}
+
+/* Style the labels */
+label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+/* Style the input fields and textarea */
+input[type="email"],
+textarea {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box; 
+}
+
+textarea {
+    height: 100px; 
+    resize: vertical;
+}
+
+button {
+    background-color: #007BFF; /* Bootstrap primary color */
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+/* Add a hover effect for the button */
+button:hover {
+    background-color: #0056b3; /* Darker shade of the primary color */
+}
+
+/* Keyframes for animation */
+@keyframes text-focus-in {
+    0% {
+        -webkit-filter: blur(12px);
+        filter: blur(12px);
+        opacity: 0;
+    }
+    100% {
+        -webkit-filter: blur(0px);
+        filter: blur(0px);
+        opacity: 1;
+    }
+}
+
+/* Apply animation to .animated-element */
+.animated-element {
+    animation: text-focus-in 1s ease-in-out;
+}
